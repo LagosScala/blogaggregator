@@ -1,0 +1,6 @@
+target
+.idea
+.eclipse
+/logs/
+/project/target
+/target
