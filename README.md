@@ -11,10 +11,14 @@ Build a blog aggregator so that
 
 # Development Approach
 We will apply the following practices and guidelines to this project:
-1. Test Driven Development .
+1. Test Driven Development.
+
 2. [SOLID principles] (https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))
+
 3. [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design), and develop a strong domain model
+
 4. Continuous Delivery
+
 5. Deploy to production every 3 weeks.
 
 
@@ -27,4 +31,5 @@ See our [Story Map](https://trello.com/b/z07jmPJX/lagos-scala-blog-aggregator-st
 
 # Sponsors
 [Ikenna Consulting](http://www.ikenna.consulting)
+
 [Hotels.ng](http://www.hotels.ng)
