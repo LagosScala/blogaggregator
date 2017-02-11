@@ -4,13 +4,17 @@ Made in Yaba, Lagos. Brought to you by the Lagos Scala Meetup http://www.meetup.
 
 # Project Goal
 Build a blog aggregator so that
+
 1. We can collect and show case blog posts from Nigerian Scala developers
+
 2. Help people learn how to build production Scala software
+
 3. Help learn the patterns and practices outlined in our development approach below
 
 
 # Development Approach
 We will apply the following practices and guidelines to this project:
+
 1. Test Driven Development.
 
 2. [SOLID principles] (https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))
