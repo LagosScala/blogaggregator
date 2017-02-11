@@ -3,13 +3,13 @@
 Made in Yaba, Lagos. Brought to you by the Lagos Scala Meetup http://www.meetup.com/lagosscala/
 
 # Project Goal
-Build a blog aggregator so that
+Build a blog aggregator to:
 
-1. We can collect and display  blog posts from Lagos Scala Meetup members.
+1. Collect and display  blog posts from Lagos Scala Meetup members.
 
-2. Help people learn how to build production Scala software
+2. Help members learn how to build production Scala software
 
-3. Help people learn the patterns and practices outlined in our development approach below
+3. Help members learn the patterns and practices outlined in our development approach below
 
 
 # Development Approach
