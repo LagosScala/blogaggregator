@@ -29,7 +29,7 @@ class FunctionalSpec extends PlaySpec with GuiceOneAppPerSuite {
 
       status(home) mustBe Status.OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Welcome to Lagos Scala")
+      contentAsString(home) must include ("Welcome to Lagos")
     }
 
   }
