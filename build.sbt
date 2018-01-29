@@ -13,7 +13,9 @@ crossScalaVersions := Seq("2.11.12", "2.12.4")
 libraryDependencies ++= Seq(
   guice,
   jdbc,
-  cache,
+  ehcache,
   ws,
   "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
-  "com.h2database" % "h2" % "1.4.196")
+  "org.reactivemongo" % "play2-reactivemongo_2.12" % "0.12.7-play26",
+  "com.h2database" % "h2" % "1.4.196"
+)
