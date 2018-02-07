@@ -1,4 +1,5 @@
-package services
+package org.lagoscala.blogaggregator
+package web.services
 
 import java.time.{Clock, Instant}
 import javax.inject._

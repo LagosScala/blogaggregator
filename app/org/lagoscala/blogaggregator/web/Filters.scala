@@ -1,3 +1,6 @@
+package org.lagoscala.blogaggregator
+package web
+
 import javax.inject._
 import play.api._
 import play.api.http.HttpFilters

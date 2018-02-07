@@ -1,4 +1,5 @@
-package controllers
+package org.lagoscala.blogaggregator
+package web.controllers
 
 import javax.inject._
 

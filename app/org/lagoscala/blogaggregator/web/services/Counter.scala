@@ -1,4 +1,5 @@
-package services
+package org.lagoscala.blogaggregator
+package web.services
 
 import java.util.concurrent.atomic.AtomicInteger
 import javax.inject._

@@ -1,4 +1,5 @@
-package filters
+package org.lagoscala.blogaggregator
+package web.filters
 
 import javax.inject._
 import play.api.mvc._

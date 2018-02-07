@@ -1,3 +1,6 @@
+package org.lagoscala.blogaggregator
+package web
+
 import com.google.inject.AbstractModule
 import java.time.Clock
 
