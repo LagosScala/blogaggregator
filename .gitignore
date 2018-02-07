@@ -3,4 +3,5 @@ target
 .eclipse
 /logs/
 /project/target
-/target
+
+*.iml

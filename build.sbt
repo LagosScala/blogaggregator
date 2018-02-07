@@ -1,21 +1,46 @@
-lazy val commonSettings = Seq(
-  name         := "blogaggregator",
-  organization := "org.lagoscala.blogaggregator",
-  version      := "0.1.0",
-  resolvers += Resolver.sonatypeRepo("snapshots")
-)
+import CommonSettings._
 
-lazy val root = (project in file("."))
-  .enablePlugins(PlayScala)
-  .settings(commonSettings:_*)
+lazy val blogaggregator = (project in file("."))
+  .aggregate(web, core, repository, slackbot, testsuite)
+
+lazy val web =  project
+
+
+lazy val repository = (project in file("repository"))
+  .settings(
+    name := "blog-aggregator-repository",
+    version := "0.1.0"
+  )
+  .settings(CommonSettings.settings)
+
+lazy val core = (project in file("core"))
+  .settings(settings)
   .settings(
     libraryDependencies ++= Seq(
-      guice, jdbc,
-      ehcache, ws,
-      "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
-      "org.reactivemongo" % "play2-reactivemongo_2.12" % "0.12.7-play26",
-      "com.h2database" % "h2" % "1.4.196"
+      akkaDependency,
+      "org.reactivemongo" %% "reactivemongo"       % "0.12.7",
+      "org.mongodb.scala" %% "mongo-scala-driver"  % "2.1.0"
     )
   )
+  .dependsOn(repository)
 
+lazy val slackbot = (project in file("slackbot"))
+  .settings(
+    name := "blog-aggregator-slackbot",
+    version := "0.1.0"
+  )
+  .settings(settings)
 
+lazy val testsuite = (project in file("testsuite"))
+  .settings(
+    name := "blog-aggregator-testsuite",
+    version := "0.1.0"
+  )
+  .settings(settings)
+  .settings(
+    libraryDependencies ++= Seq(
+      "org.scalatestplus.play" %% "scalatestplus-play"   % "3.1.2" % Test,
+      "com.typesafe.akka"      %% "akka-testkit"         % "2.5.9" % Test
+    )
+  )
+  .dependsOn(web, core, repository, slackbot)
