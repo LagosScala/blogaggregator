@@ -1,9 +1,7 @@
 import CommonSettings._
 
 lazy val blogaggregator = (project in file("."))
-  .aggregate(web, core, repository, slackbot, testsuite)
-
-lazy val web =  project
+  .aggregate(web, core, repository, slackbot)
 
 
 lazy val repository = (project in file("repository"))
@@ -31,16 +29,32 @@ lazy val slackbot = (project in file("slackbot"))
   )
   .settings(settings)
 
-lazy val testsuite = (project in file("testsuite"))
-  .settings(
-    name := "blog-aggregator-testsuite",
-    version := "0.1.0"
-  )
+lazy val web = (project in file("web"))
+  .enablePlugins(PlayScala)
   .settings(settings)
   .settings(
+    name := "blog-aggregator-web",
+    version := "0.1.0"
+  )
+  .settings(
     libraryDependencies ++= Seq(
+      guice, jdbc,
+      ehcache, ws,
       "org.scalatestplus.play" %% "scalatestplus-play"   % "3.1.2" % Test,
       "com.typesafe.akka"      %% "akka-testkit"         % "2.5.9" % Test
     )
   )
-  .dependsOn(web, core, repository, slackbot)
+
+//lazy val testsuite = (project in file("testsuite"))
+//  .settings(
+//    name := "blog-aggregator-testsuite",
+//    version := "0.1.0"
+//  )
+//  .settings(settings)
+//  .settings(
+//    libraryDependencies ++= Seq(
+//      "org.scalatestplus.play" %% "scalatestplus-play"   % "3.1.2" % Test,
+//      "com.typesafe.akka"      %% "akka-testkit"         % "2.5.9" % Test
+//    )
+//  )
+//  .dependsOn(web, core, repository, slackbot)

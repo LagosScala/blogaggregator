@@ -3,7 +3,7 @@
   * Date: 2/7/18 
   * Time: 2:47 AM
   */
-package main.scala.org.lagoscala.blogaggregator.core
+package org.lagoscala.blogaggregator.core
 
 class Test {
 

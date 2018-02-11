@@ -2,6 +2,7 @@ target
 .idea
 .eclipse
 /logs/
+/web/logs
 /project/target
 
 *.iml
